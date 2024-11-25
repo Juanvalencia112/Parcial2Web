@@ -38,7 +38,7 @@ export class PacienteService {
   async delete(id: string): Promise<void> {
     const paciente = await this.pacienteRepository.findOne({
       where: { id },
-      relations: ['diagnosticos'], // Asegúrate de cargar las relaciones
+      relations: ['diagnosticos'], 
     });
   
     if (!paciente) {
